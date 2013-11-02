@@ -11,7 +11,7 @@ else
 endif
 local_cflags_for_rs_cpp += -DRS_VERSION=$(RS_VERSION)
 
-LOCAL_CFLAGS += $(local_cflags_for_rs_cpp)
+LOCAL_CFLAGS += $(local_cflags_for_rs_cpp) $(call-cc-cpp-option,-Qunused-arguments)
 
 LOCAL_SRC_FILES:= \
 	RenderScript.cpp \
